@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "installCommand": "git clone https://github.com/flutter/flutter.git --depth 1 -b stable /tmp/flutter && export PATH=\"/tmp/flutter/bin:$PATH\" && flutter precache && flutter pub get",
+  "buildCommand": "export PATH=\"/tmp/flutter/bin:$PATH\" && flutter build web --release",
+  "outputDirectory": "build/web",
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
+}
